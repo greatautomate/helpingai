@@ -1,0 +1,17 @@
+services:
+  - type: worker
+    name: ai-telegram-bot
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: AI_BASE_URL
+        value: https://tender-taxes-sniff.loca.lt/v1
+      - key: AI_API_KEY
+        value: token-abc123
+      - key: AI_MODEL
+        value: HelpingAI/Dhanishtha-2.0-preview
+    scaling:
+      minInstances: 1
+      maxInstances: 1

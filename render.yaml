@@ -12,6 +12,4 @@ services:
         value: token-abc123
       - key: AI_MODEL
         value: HelpingAI/Dhanishtha-2.0-preview
-    scaling:
-      minInstances: 1
-      maxInstances: 1
+    
